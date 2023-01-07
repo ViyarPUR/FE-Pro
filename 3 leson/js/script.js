@@ -71,29 +71,30 @@
 
 // Напишіть функцію яка отримує массив і повертає сумму всіх значень массиву
 
-// function allSum(){
-//     let a = 0;
-//     let masiv = [3, 10, 15, 25, 5, 11];
-//     for (i=0; i<masiv.length; i++){
-//         a += masiv[i];
-//     }
-//     console.log(a);
-// }
-// allSum()
+function allSum(){
+    let a = 0;
+    let masiv = [3, 10, 15, 25, 5, 11];
+    for (i=0; i<masiv.length; i++){
+        a += masiv[i];
+    }
+    console.log(a);
+    console.log(masiv.sort());
+}
+allSum()
 
 // Створити функцію яка отримує в аргумент старт значення і фініш значення ( старт менше фініша) також отрмує массив задовільної довжини. Функція повина повертати массив в якому вирізанні значення з старт індекса по фініш
 
-let start = parseInt(prompt('Enter start value from 0 to 20'));
-let finish = parseInt(prompt('Enter finish value from 0 to 20'));
-let allArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// let start = parseInt(prompt('Enter start value from 0 to 20'));
+// let finish = parseInt(prompt('Enter finish value from 0 to 20'));
+// let allArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-function sliceFunc(){
-    if(start < finish){
-        let newAllArray = allArray.slice(start, finish);
-        console.log(newAllArray);
-    }
-    else{
-        alert('the start value must be less than the finish value')
-    }
-}
-sliceFunc();
+// function sliceFunc(){
+//     if(start < finish){
+//         let newAllArray = allArray.slice(start, finish);
+//         console.log(newAllArray);
+//     }
+//     else{
+//         alert('the start value must be less than the finish value')
+//     }
+// }
+// sliceFunc();

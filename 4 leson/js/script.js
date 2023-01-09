@@ -21,21 +21,44 @@ let bank = [
     }
 ]
 
-function buyCurency(){
+function buyCurency(arr){
     if (userWallet.amountUa == 0){
         alert('Недостатньо коштів');
+        return;
     }
-    else if (userWallet.amountUa > 0){
-        bank.forEach((value)=>{console.log(`Ви мoжете купити ${userWallet.amountUa/value.sell}`)})
-    }
+    let exchangeInfo = []
+        arr.forEach((value)=>{exchangeInfo.push(`Ви можете купити ${userWallet.amountUa/value.sell}`)});
+        console.log(exchangeInfo);
+        return exchangeInfo;
 }
-buyCurency()
+buyCurency(bank)
 
-function sellCurency(){
-    if (userWallet.amountEuro, userWallet.amountUsa == 0){
-        alert("У вас немає валюти для продажу");
+function exchangeAll(arr) {
+    let isRichUser = 0;
+    let userWalletAmount = [];
+    for (let value in userWallet) {
+      userWalletAmount.push(userWallet[value]);
+      if (userWallet[value] == 0) {
+        isRichUser += 1;
+      }
     }
-    else if (userWallet.amountEuro, userWallet.amountUsa > 0){
-        
+    if (arr.length == isRichUser) {
+      alert("Try next time");
+      return;
     }
-}
+    let totalAmount = 0;
+    const sellAmount = [];
+    for (let value of arr) {
+      sellAmount.push(value.buy);
+    }
+    sellAmount.forEach((sellValue, index) => {
+      let allCost = userWalletAmount[index];
+      totalAmount += sellValue * allCost;
+    });
+    console.log(totalAmount);
+  }
+  exchangeAll(bank);
+
+//   2)Створити функцію move яка повертає текст  на скільки кроків і куди (отримане значення) змістився користувач . Створити функцію moveUser яка отримує напрямок переміщення, кількість кроків і функцію move як колбек. 
+// moveUser ('north', move, 10) повина повернути ( Юзер перемістився на північ на 10 кроків)
+

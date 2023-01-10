@@ -62,3 +62,73 @@ function exchangeAll(arr) {
 //   2)Створити функцію move яка повертає текст  на скільки кроків і куди (отримане значення) змістився користувач . Створити функцію moveUser яка отримує напрямок переміщення, кількість кроків і функцію move як колбек. 
 // moveUser ('north', move, 10) повина повернути ( Юзер перемістився на північ на 10 кроків)
 
+let step = prompt('Вкажіть кількість кроків');
+let getAway = prompt('У якому напрямку ви хочете переміститись Північ, Південь, захід, Схід', );
+
+function move (a, b){
+  let stepDistance = `${a} кроків у напрямку ${b}`;
+  return stepDistance;
+}
+
+function moveUser (a, b, callFn){
+  let finish = `Користувач змістився на ${callFn(a, b)}`;
+  console.log(finish);
+  return finish
+}
+
+moveUser(step, getAway, move)
+
+// Створіть массив в якому видаляється кожний другий елемент ["Keep", "Remove", "Keep", "Remove", "Keep", ...] в результаті повинен бути ось такий новий массив ["Keep", "Keep", "Keep", ...], Врахувати що массив може бути пустий, повернути помилку в разі пустого масиву
+
+
+function deleteArr (masiv){
+  if (masiv.length >0){
+    for (i=0; i<masiv.length; i++){
+      masiv.splice(i+1, 1);
+    }
+  }
+  else{
+    alert("Array is empty")
+  }
+  console.log(masiv)
+}
+deleteArr(["Keep", "Remove", "Keep", "Remove", "Keep", "Remove"]);
+
+// Створити функцію яка обробляє массив обєктів і вираховує площу фігури в обєкті,
+
+let figurs = [
+  {
+      figure:"Squar",
+      sizeA: 4,
+      sizeB: 4
+  },
+  {
+      figure:"Rectangle",
+      sizeA: 4,
+      sizeB: 8
+  }
+]
+
+function plosha (){
+  let squar = figurs[0].sizeA * figurs[0].sizeB;
+  let rectangle = figurs[1].sizeA * figurs[1].sizeB;
+  console.log(squar);
+  console.log(rectangle);
+}
+plosha()
+
+// Свторити новий массив який використовує массив [2,3,5,4,8,7,9,10] і перемножує парні значення на 4
+
+let array = [2,3,5,4,8,7,9,10];
+
+function multi(array) {
+  if (array % 2 == 0) {
+    array *= 4;
+  } else {
+    array;
+  }
+
+  return array;
+}
+let arrayCopy = array.map(multi);
+console.log(arrayCopy);

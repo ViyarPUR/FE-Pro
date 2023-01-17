@@ -31,4 +31,40 @@ ken.change('Tomy', 'Iommi', 74);
 console.log(den);
 console.log(ken);
 
+// 3) Створити функцію конструктор створення (прямокутника, квадрата ) в прототип винести методи обчислення Площі, переметра, та визначення діагоналі
 
+// function ConstructFigur (a, b){
+//     this.a = a;
+//     this.b = b;
+// }
+// ConstructFigur.prototype.perimetr = function (){
+//     return `${2 * (this.a + this.b)}`;
+// }
+// ConstructFigur.prototype.plosha = function(){
+//     return `${this.a * this.b}`;
+// }
+// ConstructFigur.prototype.diagonal = function(){
+//     let dia = Math.pow(a, 2) + Math.pow(b, 2);
+//     return `${Math.sqrt(dia)}`;
+// }
+
+// const figurs = new ConstructFigur(4,5);
+// console.log(figurs.diagonal());
+
+// 4) Отримати від користувача значення name  вивести в консоль, першу і останню літеру з name в ерхньому регістрі.
+
+let userName = prompt('Enter your name')
+
+function toUp(name){
+    let firstName = name.slice(0,1);
+    let lastName = name.slice(-1);
+    let toogether = (firstName + lastName).toUpperCase();
+    console.log(toogether);
+}
+toUp(userName);
+
+// 5) Створити функцію яка отримує стрінг, обрізає пробіли спочатку і кінця стрінгу, якщо стрінг маж довжину більше 10 то відрізає все після 10 і додає 3 крапки
+
+function rezka(argum){
+    
+}

@@ -33,23 +33,23 @@ console.log(ken);
 
 // 3) Створити функцію конструктор створення (прямокутника, квадрата ) в прототип винести методи обчислення Площі, переметра, та визначення діагоналі
 
-// function ConstructFigur (a, b){
-//     this.a = a;
-//     this.b = b;
-// }
-// ConstructFigur.prototype.perimetr = function (){
-//     return `${2 * (this.a + this.b)}`;
-// }
-// ConstructFigur.prototype.plosha = function(){
-//     return `${this.a * this.b}`;
-// }
-// ConstructFigur.prototype.diagonal = function(){
-//     let dia = Math.pow(a, 2) + Math.pow(b, 2);
-//     return `${Math.sqrt(dia)}`;
-// }
+function ConstructFigur (a, b){
+    this.a = a;
+    this.b = b;
+}
+ConstructFigur.prototype.perimetr = function (){
+    return `${2 * (this.a + this.b)}`;
+}
+ConstructFigur.prototype.plosha = function(){
+    return `${this.a * this.b}`;
+}
+ConstructFigur.prototype.diagonal = function(){
+    let dia = Math.pow(this.a, 2) + Math.pow(this.b, 2);
+    return `${Math.sqrt(dia)}`;
+}
 
-// const figurs = new ConstructFigur(4,5);
-// console.log(figurs.diagonal());
+const figurs = new ConstructFigur(4,5);
+console.log(figurs.diagonal());
 
 // 4) Отримати від користувача значення name  вивести в консоль, першу і останню літеру з name в ерхньому регістрі.
 
@@ -66,5 +66,11 @@ toUp(userName);
 // 5) Створити функцію яка отримує стрінг, обрізає пробіли спочатку і кінця стрінгу, якщо стрінг маж довжину більше 10 то відрізає все після 10 і додає 3 крапки
 
 function rezka(argum){
-    
+    let argumRez = argum.trim();
+    if (argum.length > 10){
+        let obrez = argum.slice(0, 10);
+        argumRez = obrez + '...'
+    }
+    return console.log(argumRez)
 }
+rezka('    Hello     ')

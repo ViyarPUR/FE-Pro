@@ -74,7 +74,7 @@ function centuryPerevirka (century){
     else if (century.length == 3){
         let centuryMinus =parseInt(century.slice(0, 1));
         let centuryPlus =parseInt(century.slice(-2));
-        if (01 < centuryPlus <= 99){
+        if (01 < centuryPlus < 99){
             return console.log(`Ви обрали ${centuryMinus +1} сторіччя`);
         }
         else if (centuryPlus == 00){

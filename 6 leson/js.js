@@ -42,7 +42,7 @@ function callBack(){
     alert('Вітаю Ви стали на рік ближче до смерті)))')
 }
 
-function selebrate(day, month, year){
+function selebrate(day, month, year, cbFunc){
     const nowDay = new Date();
     this.day = nowDay.getDate();
     this.month = nowDay.getMonth();
@@ -50,13 +50,13 @@ function selebrate(day, month, year){
     let yourAge = this.year - year;
     month  -= month
     if (day == this.day, month == this.month){
-        return callBack();
+        return cbFunc();
     }
     else {
         return console.log(`Ваш вік ${yourAge}`)
     }
 }
-selebrate(newDay, newMonth, newYear)
+selebrate(newDay, newMonth, newYear, callBack)
 
 // 4) Створити функцію яка повертає сторіччя, функція отримує рік а повертає номер сторіччя. Наприклад:
 // 1810->19

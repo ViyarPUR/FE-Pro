@@ -44,8 +44,9 @@ window.onload = ()=>{
     // console.log(films)
 
     let [DeepwaterHorizon, GreenMile, Lordofthering] = films;
-    for(const{year} of films){
-        console.log(year);
-    }
+    films.sort(function (a, b) {
+        return a.year - b.year;
+      });
+      console.log(films);
 }
 

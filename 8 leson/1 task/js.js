@@ -16,29 +16,6 @@
     }
 
     
-    
-    // function submitSpisok (){
-    //     let list = document.querySelector('.listMy');
-    //     let userData = document.getElementById('exampleInputEmail1');
-    //     let timeData = document.createElement('div');
-    //     let textData = document.createElement('div');
-    //     textData.className = "texting";
-    //     textData.innerHTML = userData.value;
-    //     timeData.innerHTML = new Date().toLocaleString();
-    //     let allData = document.createElement('div');
-    //     allData.className = 'all';
-    //     allData.appendChild(textData);
-    //     allData.appendChild(timeData);
-    //     let elementsData = document.getElementsByClassName('all');
 
-    //     if (elementsData.length <= 4){
-    //         list.appendChild(allData);
-    //     }
-    //     else{
-    //         list.firstChild.remove();
-    //         list.appendChild(allData);
-    //     }
-
-    // }
 
     
